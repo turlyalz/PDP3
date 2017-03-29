@@ -73,12 +73,12 @@ bool InputManager::parse(int argc, char* argv[])
 
             istringstream iss(data);
 			iss >> m_problem->n;
-/*
+
             if (m_problem->a < 5 || m_problem->a > (m_problem->n / 2))
 			{
                 cerr << "a must be in range [5, n/2]" << endl;
 				return false;
-            }*/
+            }
 			
             while (getline(in, data))
 			{
