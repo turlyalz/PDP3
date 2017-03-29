@@ -76,12 +76,12 @@ void Solver::solveSubtree(uint n, uint r, std::vector<uint>& state)
 
     state[r - 1] = n - 1;
 
-    /*// Calculate predicate price
+    // Calculate predicate price
     uint price = calculatePrice(state);
     if (price > m_solution->price)
     {
         return;
-    }*/
+    }
 
     #pragma omp task shared(state)
         solveSubtree(n - 1, r - 1, state);
